@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="calc-wrapper">
+		<div id="app" class="app">
+			<div class="calc-container">
+				<div class="calc-app">
+					<div class="calc-display">
+						<input	class="calc-display__display__top"
+								id="showSavedValue"
+								type="text"
+								value=""
+								disabled="disabled" 
+						/>
+						<input  id="display"
+								class="calc-display__display"
+								type="text"
+								value="0"
+								disabled="disabled" 
+						/>
+						<input	class="calc-display__display__bottom"
+								id="showOperator"
+								type="text"
+								value=""
+								disabled="disabled" 
+						/>
+					</div>
+					<div class="calc-buttons">
+						<div id="buttons" class="calc-buttons__buttons">
+							<input class="calc-buttons__buttons__button" type="button" value="7" />
+							<input class="calc-buttons__buttons__button" type="button" value="8" />
+							<input class="calc-buttons__buttons__button" type="button" value="9" />
+							<input class="calc-buttons__buttons__button" type="button" value="4" />
+							<input class="calc-buttons__buttons__button" type="button" value="5" />
+							<input class="calc-buttons__buttons__button" type="button" value="6" />
+							<input class="calc-buttons__buttons__button" type="button" value="1" />
+							<input class="calc-buttons__buttons__button" type="button" value="2" />
+							<input class="calc-buttons__buttons__button" type="button" value="3" />
+							<input class="calc-buttons__buttons__button zero" type="button" value="0" />
+							<input class="calc-buttons__buttons__button dot"
+									type="button"
+									value="."
+							/>
+						</div>
+						<div class="calc-buttons__operators__wrapper">
+							<div class="calc-buttons__operators__cancel">
+								<input id="cancel" class="calc-buttons__buttons__operator cancel" type="button" value="C" />
+							</div>
+							<div id="operators" class="calc-buttons__operators">
+								<input class="calc-buttons__buttons__operator" type="button" value="+" />
+								<input class="calc-buttons__buttons__operator" type="button" value="-" />
+								<input class="calc-buttons__buttons__operator" type="button" value="/" />
+								<input class="calc-buttons__buttons__operator" type="button" value="*" />
+							</div>
+							<div class="calc-buttons__operators__eq">
+								<input id="eq" class="calc-buttons__buttons__operator eq" type="button" value="=" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="script/script.js"></script>
+</body>
+</html>

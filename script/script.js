@@ -72,8 +72,6 @@ eq.onclick = function() {
 	}
 }
 
-console.log('should works');
-
 
 
 

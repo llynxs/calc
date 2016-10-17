@@ -47,7 +47,6 @@ for (var i = 0; i < operator.length; i++) {
 	operator[i].onclick = function (e) {
 		var op = this.value;
 		memory = display.value;
-
 		display.value = '0';
 		sender = {
 			mem: memory,
@@ -73,7 +72,7 @@ eq.onclick = function() {
 	}
 }
 
-
+console.log('should works');
 
 
 

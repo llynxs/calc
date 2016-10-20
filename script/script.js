@@ -24,8 +24,13 @@ for (var i = 0; i < inputs.length; i++) {
 	})();
 }
 
+cancel.onclick = function() {
+	result = display.value = 0;
+
+}
+
 function dotFunc() {
-	if (display.value == '0' && display.value.indexOf('.') == -1) {
+	if (display.value == '0' && display.value.indexOf('.') == -1 || (result && display.value == result) ) {
 		return display.value = '0.'
 	} else {
 		if (display.value.indexOf('.') == -1) {
@@ -35,19 +40,23 @@ function dotFunc() {
 }
 
 function addDigit(arg) {
-	if (display.value == '0' && display.value.indexOf('.') == -1) {
+	if ((display.value == '0' && display.value.indexOf('.') == -1) || (result && display.value == result)) {
 		display.value = arg;
 		return display.value;
 	} else {
+		console.log('sdfsdfs');
 		return display.value += arg;
 	}
 }
 
 for (var i = 0; i < operator.length; i++) {		
 	operator[i].onclick = function (e) {
+
 		var op = this.value;
+
 		memory = display.value;
 		display.value = '0';
+		
 		sender = {
 			mem: memory,
 			op: op
@@ -62,7 +71,8 @@ eq.onclick = function() {
 		second = parseFloat(display.value);
 
 	if (sender.op == '+') {
-		return display.value = first + second;
+		result = display.value = first + second;
+		return result;
 	} else if(sender.op == '-') {
 		return display.value = first - second;
 	} else if(sender.op == '/') {
